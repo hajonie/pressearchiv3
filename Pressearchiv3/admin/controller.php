@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
  * @subpackage  com_pressearchiv
  * @since       3.0
  */
-class PressearchivController extends JControllerLegacy
+class PressearchivsController extends JControllerLegacy
 {
 	/**
 	 * Method to display a view.
@@ -32,18 +32,18 @@ class PressearchivController extends JControllerLegacy
 	 */
 	public function display($cachable = false, $urlparams = false)
 	{
-		require_once JPATH_COMPONENT.'/helpers/pressearchiv.php';
+		require_once JPATH_COMPONENT.'/helpers/pressearchivs.php';
 
-		$view   = $this->input->get('view', 'pressearchiv');
+		$view   = $this->input->get('view', 'pressearchivs');
 		$layout = $this->input->get('layout', 'default');
 		$id     = $this->input->getInt('id');
 
 		// Check for edit form.
-		if ($view == 'pressearchiv' && $layout == 'edit' && !$this->checkEditId('com_pressearchiv.edit.pressearchiv', $id)) {
+		if ($view == 'pressearchiv' && $layout == 'edit' && !$this->checkEditId('com_pressearchivs.edit.pressearchiv', $id)) {
 			// Somehow the person just went to the form - we don't allow that.
 			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
 			$this->setMessage($this->getError(), 'error');
-			$this->setRedirect(JRoute::_('index.php?option=com_pressearchiv&view=pressearchivs', false));
+			$this->setRedirect(JRoute::_('index.php?option=com_pressearchivs&view=pressearchivs', false));
 
 			return false;
 		}
