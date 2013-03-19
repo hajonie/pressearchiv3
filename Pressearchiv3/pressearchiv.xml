@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_PRESSEARCHIV</name>
+	<creationDate>März 2013</creationDate>
+	<author>Pressearchiv Development Team</author>
+	<authorEmail>hj.n@bigfoot.com</authorEmail>
+	<authorUrl>http://jpa.hjnbb.de</authorUrl>
+	<copyright>Copyright (c) 2011 - 2013 by Pressearchiv Development Team</copyright>
+	<license>This component in released under the GNU/GPL v3 or later license</license>
+	<version>3.0.0a1</version>
+	<description>COM_PRESSEARCHIV_DESCRIPTION</description>
+
+	<!-- Runs on install/uninstall/update -->
+	<scriptfile>script.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charsert="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>    
+	<update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>pressearchiv.php</filename>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<media destination="com_pressearchiv" folder="media">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+	</media>
+
+	<administration>
+	<!-- Administration Menu Section -->
+		<menu img="../media/com_pressearchiv/images/icon-16-pressearchiv.png">COM_PRESSEARCHIV_MENU</menu>
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>changelog.php</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>		
+			<filename>pressearchiv.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+</extension>
