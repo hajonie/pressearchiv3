@@ -7,6 +7,6 @@
  * @date        06.02.2013
  *
  * @copyright   Copyright (C) 2011 - 2013 Pressearchiv Development Team, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @license     GNU General Public License version 3 or later
  */
 
