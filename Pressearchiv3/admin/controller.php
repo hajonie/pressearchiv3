@@ -13,14 +13,20 @@
 defined('_JEXEC') or die;
 
 /**
- * Pressearchiv Controller
+ * Pressearchiv Master Controller
  *
  * @package     Joomla.Administrator
  * @subpackage  com_pressearchiv
  * @since       3.0
  */
-class PressearchivsController extends JControllerLegacy
+class PressearchivController extends JControllerLegacy
 {
+	/**
+	 * @var   string  The default view.
+	 * @since   3.0
+	 */
+	protected $default_view = 'cpanel';
+	
 	/**
 	 * Method to display a view.
 	 *
@@ -28,25 +34,14 @@ class PressearchivsController extends JControllerLegacy
 	 * @param	array			$urlparams	An array of safe url parameters and their variable types, for valid values see {@link JFilterInput::clean()}.
 	 *
 	 * @return	JController		This object to support chaining.
-	 * @since	1.5
+	 * @since	3.0
 	 */
+
+	
 	public function display($cachable = false, $urlparams = false)
 	{
-		require_once JPATH_COMPONENT.'/helpers/pressearchivs.php';
-
-		$view   = $this->input->get('view', 'pressearchivs');
-		$layout = $this->input->get('layout', 'default');
-		$id     = $this->input->getInt('id');
-
-		// Check for edit form.
-		if ($view == 'pressearchiv' && $layout == 'edit' && !$this->checkEditId('com_pressearchivs.edit.pressearchiv', $id)) {
-			// Somehow the person just went to the form - we don't allow that.
-			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
-			$this->setMessage($this->getError(), 'error');
-			$this->setRedirect(JRoute::_('index.php?option=com_pressearchivs&view=pressearchivs', false));
-
-			return false;
-		}
+		$view   = $this->input->get('view', 'cpanel');
+		$layout = $this->input->get('layout', 'cpanel');
 
 		parent::display();
 
