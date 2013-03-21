@@ -21,13 +21,13 @@ defined('_JEXEC') or die;
 				<div id="cpanel">
 					<?php
 					$link = 'index.php?option=com_pressearchiv&amp;view=pressearchivs';
-					echo ImprintHelper::quickIconButton($link, '48px/icon-48-home.png', JText::_('COM_PRESSEARCHIV_ARTICLES'));
+					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-home.png', JText::_('COM_PRESSEARCHIV_ARTICLES'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
-					echo ImprintHelper::quickIconButton($link, '48px/icon-48-source.png', JText::_('COM_PRESSEARCHIV_SOURCES'));
+					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-source.png', JText::_('COM_PRESSEARCHIV_SOURCES'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
-					echo ImprintHelper::quickIconButton($link, '48px/icon-48-category.png', JText::_('COM_PRESSEARCHIV_CATEGORIES'));
+					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-category.png', JText::_('COM_PRESSEARCHIV_CATEGORIES'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 					<p>&nbsp;</p>
@@ -52,7 +52,7 @@ defined('_JEXEC') or die;
 					<div style="border-top:1px solid #c2c2c2"></div>
 					<p>&nbsp;</p>
 					<div class="btn-group">
-						<a class="btn btn-large btn-primary" href="http://joomla-pressearchiv.github.com/imprint/" target="_blank">
+						<a class="btn btn-large btn-primary" href="https://github.com/hajonie/pressearchiv3/tree/master/Pressearchiv3" target="_blank">
 							<i class="icon-loop icon-white"></i>&nbsp;&nbsp;
 							<?php echo JText::_('COM_PRESSEARCHIV_CHECK_FOR_UPDATE'); ?>
 						</a>
