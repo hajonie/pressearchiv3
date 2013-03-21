@@ -17,3 +17,21 @@
 	float: right;
 	width: 50%;
 }
+.pressearchiv-icon {
+	margin: 0;
+	padding: 5px;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+}
+.pressearchiv-icon-inside.thumbnail {
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 0px;  
+    border-radius: 0px;
+	background: #fdfdfd;
+}
+.pressearchiv-icon-inside.thumbnail img {
+	margin-top: 10px;
+	margin-bottom: -12px;
+}

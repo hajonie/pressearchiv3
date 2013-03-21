@@ -43,7 +43,7 @@ defined('_JEXEC') or die;
 						<?php echo JHTML::_('image', 'team-pressearchiv.png', 'Team Pressearchiv'); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
-					<p><?php echo PressearchivHelper::getVersion();?></p>'
+					<p><?php echo PressearchivHelper::getVersion();?></p>
 					<h3><?php echo JText::_('COM_PRESSEARCHIV_COPYRIGHT'); ?></h3>
 					<p>&copy; 2009 - <?php echo date("Y"); ?> Pressearchiv Development Team</p>
 					<p><a href="http://jpa.hjnbb.de" target="_blank">Homepage</a></p>

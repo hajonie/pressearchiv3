@@ -69,8 +69,8 @@ class PressearchivHelper
 	public static function quickIconButton($link, $image, $text)
 	{
 		$imgUrl = '../media/com_pressearchiv/images/assets/';
-		$code	= '<div class="thumbnails ph-icon">'
-				. '<a class="thumbnail ph-icon-inside" href="' . $link . '">'
+		$code	= '<div class="thumbnails pressearchiv-icon">'
+				. '<a class="thumbnail pressearchiv-icon-inside" href="' . $link . '">'
 						. JHTML::_('image', $imgUrl . $image, $text)
 						. '<br /><span>' . $text . '</span></a></div>' . "\n";
 
@@ -113,24 +113,24 @@ class PressearchivHelper
 	public static function addSubmenu($vName)
 	{
 		JHtmlSidebar::addEntry(
-		JText::_('COM_PRESSEARCHIV_SUBMENU_CPANEL'),
-		'index.php?option=com_pressearchiv&view=cpanel',
-		$vName == 'cpanel'
-				);
-				JHtmlSidebar::addEntry(
-				JText::_('COM_PRESSEARCHIV_SUBMENU_ARTICLES'),
-				'index.php?option=com_pressearchiv&view=articles',
-				$vName == 'articles'
-						);
-						JHtmlSidebar::addEntry(
-						JText::_('COM_PRESSEARCHIV_SUBMENU_SOURCES'),
-						'index.php?option=com_pressearchiv&view=sources',
-						$vName == 'sources'
-								);
-								JHtmlSidebar::addEntry(
-								JText::_('COM_PRESSEARCHIV_SUBMENU_ABOUT'),
-								'index.php?option=com_pressearchiv&view=about',
-								$vName == 'about'
-										);
+			JText::_('COM_PRESSEARCHIV_SUBMENU_CPANEL'),
+			'index.php?option=com_pressearchiv&view=cpanel',
+			$vName == 'cpanel'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_PRESSEARCHIV_SUBMENU_ARTICLES'),
+			'index.php?option=com_pressearchiv&view=articles',
+			$vName == 'articles'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_PRESSEARCHIV_SUBMENU_SOURCES'),
+			'index.php?option=com_pressearchiv&view=sources',
+			$vName == 'sources'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_PRESSEARCHIV_SUBMENU_ABOUT'),
+			'index.php?option=com_pressearchiv&view=about',
+			$vName == 'about'
+		);
 	}
 }
