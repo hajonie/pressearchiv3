@@ -31,7 +31,7 @@ class PressearchivViewCPanel extends JViewLegacy
 	public function display($tpl = null)
 	{
 		JHTML::_('behavior.tooltip');
-		JHTML::stylesheet(JUri::root() . 'media/com_pressearchiv/css/com_imprint.css');
+		JHTML::stylesheet(JUri::root() . 'media/com_pressearchiv/css/pressearchiv.css');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
