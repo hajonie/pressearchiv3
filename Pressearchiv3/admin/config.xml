@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<fieldset
-		name="settings"
+		name="general_settings"
 		label="COM_PRESSEARCHIV_OPTIONS_SETTINGS"
 		description="COM_PRESSEARCHIV_OPTIONS_SETTINGS_DESC"
 	>
@@ -14,6 +14,52 @@
 			<option value="sliders">COM_PRESSEARCHIV_FIELD_VALUE_SLIDERS</option>
 		</field>
 	</fieldset>
+
+	<fieldset
+		name="layout_tabelle"
+		label="COM_PRESSEARCHIV_LAYOUT_TABELLE"
+		description="COM_PRESSEARCHIV_LAYOUT_TABELLE_DESC"
+	>
+		<field name="presentation_style"
+			type="list"
+			label="COM_PRESSEARCHIV_FIELD_PRESENTATION_LABEL"
+			description="COM_PRESSEARCHIV_FIELD_PRESENTATION_DESC"
+		>
+			<option value="tabs">COM_PRESSEARCHIV_FIELD_VALUE_TABS</option>
+			<option value="sliders">COM_PRESSEARCHIV_FIELD_VALUE_SLIDERS</option>
+		</field>
+	</fieldset>
+
+	<fieldset
+		name="layout_detail"
+		label="COM_PRESSEARCHIV_LAYOUT_DETAIL"
+		description="COM_PRESSEARCHIV_LAYOUT_DETAIL_DESC"
+	>
+		<field name="presentation_style"
+			type="list"
+			label="COM_PRESSEARCHIV_FIELD_PRESENTATION_LABEL"
+			description="COM_PRESSEARCHIV_FIELD_PRESENTATION_DESC"
+		>
+			<option value="tabs">COM_PRESSEARCHIV_FIELD_VALUE_TABS</option>
+			<option value="sliders">COM_PRESSEARCHIV_FIELD_VALUE_SLIDERS</option>
+		</field>
+	</fieldset>
+
+	<fieldset
+		name="globale_parameter"
+		label="COM_PRESSEARCHIV_GLOBALE_PARAMETER"
+		description="COM_PRESSEARCHIV_GLOBALE_PARAMETER_DESC"
+	>
+		<field name="presentation_style"
+			type="list"
+			label="COM_PRESSEARCHIV_FIELD_PRESENTATION_LABEL"
+			description="COM_PRESSEARCHIV_FIELD_PRESENTATION_DESC"
+		>
+			<option value="tabs">COM_PRESSEARCHIV_FIELD_VALUE_TABS</option>
+			<option value="sliders">COM_PRESSEARCHIV_FIELD_VALUE_SLIDERS</option>
+		</field>
+	</fieldset>
+
 	<fieldset
 		name="permissions"
 		label="JCONFIG_PERMISSIONS_LABEL"
