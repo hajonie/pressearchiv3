@@ -23,19 +23,20 @@ defined('_JEXEC') or die;
 					$link = 'index.php?option=com_pressearchiv&amp;view=pressearchivs';
 					echo PressearchivHelper::quickIconButton($link, "icon-48-home.png", JText::_('COM_PRESSEARCHIV_ARTIKEL'));
 
-					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
-					echo PressearchivHelper::quickIconButton($link, "icon-48-source.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
-
 					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
 					echo PressearchivHelper::quickIconButton($link, "icon-48-category.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
+						
+					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
+					echo PressearchivHelper::quickIconButton($link, "icon-48-source.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 				</div>
 			</div>
+			
 			<div class="pressearchiv-cpanel-right">
 				<div class="well">
 					<div style="float:right;margin:10px;">
-						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', 'Team Pressearchiv'); ?>
+						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', JText::_('COM_PRESSEARCHIV_LOGO')); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
 					<p><?php echo PressearchivHelper::getVersion();?></p>
