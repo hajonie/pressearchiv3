@@ -68,10 +68,10 @@ class PressearchivHelper
 	 */
 	public static function quickIconButton($link, $image, $text)
 	{
-		$imgUrl = '../media/com_pressearchiv/images/assets/';
+		$imgUrl = 'media/com_pressearchiv/images/assets/' . $image;
 		$code	= '<div class="thumbnails pressearchiv-icon">'
 				. '<a class="thumbnail pressearchiv-icon-inside" href="' . $link . '">'
-						. JHTML::_('image', $imgUrl . $image, $text)
+						. JHTML::_('image', $imgUrl, $text)
 						. '<br /><span>' . $text . '</span></a></div>' . "\n";
 
 		return $code;

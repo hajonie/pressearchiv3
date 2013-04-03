@@ -56,7 +56,7 @@ class PressearchivViewCPanel extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = PressearchivHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'cpanel');
+		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'pressearchiv.png');
 
 		if ($canDo->get('core.admin'))
 		{

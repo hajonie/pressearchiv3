@@ -21,13 +21,13 @@ defined('_JEXEC') or die;
 				<div id="cpanel">
 					<?php
 					$link = 'index.php?option=com_pressearchiv&amp;view=pressearchivs';
-					echo PressearchivHelper::quickIconButton($link, 'icon-48-home.png', JText::_('COM_PRESSEARCHIV_ARTICLES'));
+					echo PressearchivHelper::quickIconButton($link, "icon-48-home.png", JText::_('COM_PRESSEARCHIV_ARTIKEL'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
-					echo PressearchivHelper::quickIconButton($link, 'icon-48-source.png', JText::_('COM_PRESSEARCHIV_SOURCES'));
+					echo PressearchivHelper::quickIconButton($link, "icon-48-source.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
-					echo PressearchivHelper::quickIconButton($link, 'icon-48-category.png', JText::_('COM_PRESSEARCHIV_CATEGORIES'));
+					echo PressearchivHelper::quickIconButton($link, "icon-48-category.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 					<p>&nbsp;</p>
