@@ -21,13 +21,13 @@ defined('_JEXEC') or die;
 				<div id="cpanel">
 					<?php
 					$link = 'index.php?option=com_pressearchiv&amp;view=pressearchivs';
-					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-home.png', JText::_('COM_PRESSEARCHIV_ARTICLES'));
+					echo PressearchivHelper::quickIconButton($link, 'icon-48-home.png', JText::_('COM_PRESSEARCHIV_ARTICLES'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
-					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-source.png', JText::_('COM_PRESSEARCHIV_SOURCES'));
+					echo PressearchivHelper::quickIconButton($link, 'icon-48-source.png', JText::_('COM_PRESSEARCHIV_SOURCES'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
-					echo PressearchivHelper::quickIconButton($link, '48px/icon-48-category.png', JText::_('COM_PRESSEARCHIV_CATEGORIES'));
+					echo PressearchivHelper::quickIconButton($link, 'icon-48-category.png', JText::_('COM_PRESSEARCHIV_CATEGORIES'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 					<p>&nbsp;</p>
@@ -40,7 +40,7 @@ defined('_JEXEC') or die;
 			<div class="pressearchiv-cpanel-right">
 				<div class="well">
 					<div style="float:right;margin:10px;">
-						<?php echo JHTML::_('image', 'team-pressearchiv.png', 'Team Pressearchiv'); ?>
+						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', 'Team Pressearchiv'); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
 					<p><?php echo PressearchivHelper::getVersion();?></p>
