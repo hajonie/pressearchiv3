@@ -30,11 +30,6 @@ defined('_JEXEC') or die;
 					echo PressearchivHelper::quickIconButton($link, "icon-48-category.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
 					?>
 					<div style="clear:both">&nbsp;</div>
-					<p>&nbsp;</p>
-					<div class="alert alert-block alert-info ph-w80">
-						<button type="button" class="close" data-dismiss="alert">×</button>
-						<?php echo PressearchivHelper::getLinks(); ?>
-					</div>
 				</div>
 			</div>
 			<div class="pressearchiv-cpanel-right">
