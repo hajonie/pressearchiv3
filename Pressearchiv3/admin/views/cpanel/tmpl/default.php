@@ -26,10 +26,10 @@ defined('_JEXEC') or die;
 					echo PressearchivHelper::quickIconButton($link, "icon-48-home.png", JText::_('COM_PRESSEARCHIV_ARTIKEL'));
 
 					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
-					echo PressearchivHelper::quickIconButton($link, "icon-48-categories.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
+					echo PressearchivHelper::quickIconButton($link, "icon-48-category.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
 						
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
-					echo PressearchivHelper::quickIconButton($link, "icon-48-sources.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
+					echo PressearchivHelper::quickIconButton($link, "icon-48-source.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 				</div>
