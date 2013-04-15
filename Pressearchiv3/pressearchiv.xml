@@ -48,6 +48,9 @@
 	<administration>
 	<!-- Administration Menu Section -->
 		<menu img="../media/com_pressearchiv/images/icon-16-pressearchiv.png">COM_PRESSEARCHIV_MENU</menu>
+		<submenu>
+			<menu img="media/com_pressearchiv/images/icon-16-cp.png" alt="COM_PRESSEARCHIV_SUBMENU_CP" view="cpanel" link="option=com_pressearchiv">COM_PRESSEARCHIV_SUBMENU_CP</menu>
+		</submenu>
 		<!-- Administration Main File Copy Section -->
 		<files folder="admin">
 			<filename>index.html</filename>
