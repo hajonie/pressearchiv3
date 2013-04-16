@@ -55,6 +55,8 @@ class PressearchivViewCPanel extends JViewLegacy
 	 */
 	protected function addToolBar()
 	{
+		require_once JPATH_COMPONENT.'/helpers/pressearchiv.php';
+		
 		$canDo = PressearchivHelper::getActions();
 		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'pressearchiv.png');
 
@@ -65,5 +67,11 @@ class PressearchivViewCPanel extends JViewLegacy
 		}
 
 		JToolBarHelper::help('screen.pressearchiv', true);
+		
+		JHtmlSidebar::addFilter(
+		JText::_('JOPTION_SELECT_CATEGORY'),
+		'filter_category_id',
+		JHtml::_('select.options', JHtml::_('category.options', 'com_pressearchiv'), 'value', 'text', $this->state->get('filter.category_id'))
+		);
 	}
 }
