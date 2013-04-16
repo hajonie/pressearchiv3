@@ -30,9 +30,13 @@ class PressearchivViewCPanel extends JViewLegacy
 	 */
 	public function display($tpl = null)
 	{
+		$this->state = $this->get('State');
+		
 		JHTML::_('behavior.tooltip');
 		JHTML::stylesheet(JUri::root() . 'media/com_pressearchiv/css/pressearchiv.css');
 
+		PressearchivHelper::addSubmenu('pressearchiv');
+		
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
@@ -42,7 +46,7 @@ class PressearchivViewCPanel extends JViewLegacy
 		}
 
 		$this->addToolBar();
-
+		$this->sidebar = JHtmlSidebar::render();
 		parent::display($tpl);
 	}
 
@@ -57,7 +61,9 @@ class PressearchivViewCPanel extends JViewLegacy
 	{
 		require_once JPATH_COMPONENT.'/helpers/pressearchiv.php';
 		
-		$canDo = PressearchivHelper::getActions();
+		$state	= $this->get('State');
+		$canDo = PressearchivHelper::getActions($state->get('filter.category_id'));
+
 		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'pressearchiv.png');
 
 		if ($canDo->get('core.admin'))

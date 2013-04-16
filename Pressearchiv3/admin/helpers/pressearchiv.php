@@ -27,26 +27,26 @@ class PressearchivHelper
 	 * Gets a list of the actions that can be performed.
 	 *
 	 * @param   integer  $pressearchivId  The Press Archiv ID.
-	 *
 	 * @return  JObject
-	 *
-	 * @since   4.0
+	 * @since   1.6
 	 */
-	public static function getActions($imprintId = 0)
+	public static function getActions($categoryId = 0)
 	{
 		$user	= JFactory::getUser();
 		$result	= new JObject;
 
-		if (empty($pressearchivId))
+		if (empty($categoryId))
 		{
 			$assetName = 'com_pressearchiv';
+			$level = 'component';
 		}
 		else
 		{
-			$assetName = 'com_pressearchiv.pressearchiv.' . (int) $pressearchivId;
+			$assetName = 'com_pressearchiv.category.' . (int) $categoryId;
+			$level = 'category';
 		}
 
-		$actions = JAccess::getActions('com_pressearchiv', 'component');
+		$actions = JAccess::getActions('com_pressearchiv', $level);
 
 		foreach ($actions as $action)
 		{
