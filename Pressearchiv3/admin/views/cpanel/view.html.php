@@ -21,6 +21,8 @@ defined('_JEXEC') or die;
  */
 class PressearchivViewCPanel extends JViewLegacy
 {
+	protected $state;
+	
 	/**
 	 * Display the Pressearchiv CPanel View
 	 *
@@ -41,7 +43,6 @@ class PressearchivViewCPanel extends JViewLegacy
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseError(500, implode('\n', $errors));
-
 			return false;
 		}
 
