@@ -110,27 +110,34 @@ class PressearchivHelper
 	 * @return  void
 	 * @since   3.0
 	 */
-	public static function addSubmenu($vName)
+	public static function addSubmenu($vName = 'pressearchiv')
 	{
 		JHtmlSidebar::addEntry(
-			JText::_('COM_PRESSEARCHIV_SUBMENU_CPANEL'),
+			JText::_('COM_PRESSEARCHIV_SUBMENU_CP'),
 			'index.php?option=com_pressearchiv&view=cpanel',
 			$vName == 'cpanel'
 		);
 		JHtmlSidebar::addEntry(
-			JText::_('COM_PRESSEARCHIV_SUBMENU_ARTICLES'),
-			'index.php?option=com_pressearchiv&view=articles',
-			$vName == 'articles'
+			JText::_('COM_PRESSEARCHIV_SUBMENU_ARTIKEL'),
+			'index.php?option=com_pressearchiv&view=pressearchivs',
+			$vName == 'pressearchivs'
 		);
 		JHtmlSidebar::addEntry(
-			JText::_('COM_PRESSEARCHIV_SUBMENU_SOURCES'),
+			JText::_('COM_PRESSEARCHIV_SUBMENU_KATEGORIEN'),
+			'index.php?option=com_pressearchiv&view=categories',
+			$vName == 'categories'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_PRESSEARCHIV_SUBMENU_QUELLEN'),
 			'index.php?option=com_pressearchiv&view=sources',
 			$vName == 'sources'
 		);
-		JHtmlSidebar::addEntry(
-			JText::_('COM_PRESSEARCHIV_SUBMENU_ABOUT'),
-			'index.php?option=com_pressearchiv&view=about',
-			$vName == 'about'
-		);
+		
+		if ($vName == 'categories')
+		{
+			JToolbarHelper::title(
+			JText::sprintf('COM_CATEGORIES_CATEGORIES_TITLE', JText::_('com_pressearchiv')),
+			'pressearchiv-categories');
+		}
 	}
 }

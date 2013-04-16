@@ -49,10 +49,10 @@
 	<!-- Administration Menu Section -->
 		<menu img="../media/com_pressearchiv/images/icon-16-pressearchiv.png">COM_PRESSEARCHIV_MENU</menu>
 		<submenu>
-			<menu img="../media/com_pressearchiv/images/icon-16-cp.png" alt="COM_PRESSEARCHIV_SUBMENU_CP" view="cpanel" link="option=com_ppressearchiv">COM_PRESSEARCHIV_SUBMENU_CP</menu>
-			<menu img="../media/com_pressearchiv/images/icon-16-pressearchiv.png" alt="COM_PRESSEARCHIV_ARTIKEL" view="articles" link="option=com_pressearchiv&amp;view=pressearchivs">COM_PRESSEARCHIV_ARTIKEL</menu>
-			<menu img="../media/com_pressearchiv/images/icon-16-category.png" alt="COM_PRESSEARCHIV_KATEGORIEN" view="categories" link="option=com_pressearchiv&amp;view=categories">COM_PRESSEARCHIV_KATEGORIEN</menu>
-			<menu img="../media/com_pressearchiv/images/icon-16-source.png" alt="COM_PRESSEARCHIV_QUELLEN" view="sources" link="option=com_pressearchiv&amp;view=sources">COM_PRESSEARCHIV_QUELLEN</menu>
+			<menu img="../media/com_pressearchiv/images/icon-16-cp.png" alt="COM_PRESSEARCHIV_SUBMENU_CP" view="cpanel" link="option=com_pressearchiv">COM_PRESSEARCHIV_SUBMENU_CP</menu>
+			<menu img="../media/com_pressearchiv/images/icon-16-pressearchiv.png" alt="COM_PRESSEARCHIV_ARTIKEL" view="articles" link="option=com_pressearchiv&amp;view=pressearchivs">COM_PRESSEARCHIV_SUBMENU_ARTIKEL</menu>
+			<menu img="../media/com_pressearchiv/images/icon-16-category.png" alt="COM_PRESSEARCHIV_KATEGORIEN" view="categories" link="option=com_pressearchiv&amp;view=categories">COM_PRESSEARCHIV_SUBMENU_KATEGORIEN</menu>
+			<menu img="../media/com_pressearchiv/images/icon-16-source.png" alt="COM_PRESSEARCHIV_QUELLEN" view="sources" link="option=com_pressearchiv&amp;view=sources">COM_PRESSEARCHIV_SUBMENU_QUELLEN</menu>
 		</submenu>
 		<!-- Administration Main File Copy Section -->
 		<files folder="admin">
