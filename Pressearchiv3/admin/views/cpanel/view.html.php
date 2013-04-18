@@ -63,7 +63,7 @@ class PressearchivViewCPanel extends JViewLegacy
 		require_once JPATH_COMPONENT.'/helpers/pressearchiv.php';
 		
 		$state	= $this->get('State');
-		$canDo = PressearchivHelper::getActions($state->get('filter.category_id'));
+		$canDo = PressearchivHelper::getActions();
 
 		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'pressearchiv.png');
 
