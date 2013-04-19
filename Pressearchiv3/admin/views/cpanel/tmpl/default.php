@@ -4,11 +4,12 @@
  * @version     3.0.0
  * @filename    default.php
  * @author      Hans-Joachim Niemann
- * @date        21.03.2013
+ * @date        19.04.2013
  *
  * @copyright   Copyright (C) 2011 - 2013 Pressearchiv Development Team, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later
  */
+
 
 defined('_JEXEC') or die;
 
