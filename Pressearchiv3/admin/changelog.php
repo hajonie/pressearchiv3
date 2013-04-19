@@ -10,3 +10,9 @@
  * @license     GNU General Public License version 3 or later
  */
 
+	die();
+?>
+
+Pressearchiv 3.0.0a1
+================================================================================
++ Pressearchiv 3.0.0 Alpha Release für Joomla! 3.x

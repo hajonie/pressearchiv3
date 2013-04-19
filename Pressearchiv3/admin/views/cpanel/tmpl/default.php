@@ -41,7 +41,21 @@ defined('_JEXEC') or die;
 						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', JText::_('COM_PRESSEARCHIV_LOGO')); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
-					<p><?php echo PressearchivHelper::getVersion();?></p>
+					<p><?php echo PressearchivHelper::getVersion();?> &bull;
+					
+					<!-- CHANGELOG :: BEGIN -->
+						<a href="#" id="btnchangelog" class="btn btn-mini">CHANGELOG</a>
+					</p>
+					<div style="display:none;">
+						<div id="pressearchiv-changelog">
+							<?php
+								require_once dirname(__FILE__).'/coloriser.php';
+								echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/CHANGELOG.php');
+							?>
+						</div>
+					</div>
+					<!-- CHANGELOG :: END -->
+										
 					<h3><?php echo JText::_('COM_PRESSEARCHIV_COPYRIGHT'); ?></h3>
 					<p>&copy; 2009 - <?php echo date("Y"); ?> Pressearchiv Development Team</p>
 					<p><a href="http://jpa.hjnbb.de" target="_blank">Homepage</a></p>
