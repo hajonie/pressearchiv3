@@ -16,10 +16,10 @@ defined('_JEXEC') or die;
  * Methods supporting a list of weblink records.
  *
  * @package     Joomla.Administrator
- * @subpackage  com_weblinks
+ * @subpackage  com_pressearchiv
  * @since       1.6
  */
-class WeblinksModelWeblinks extends JModelList
+class PressearchivModelCpanel extends JModelList
 {
 	/**
 	 * Method to auto-populate the model state.
