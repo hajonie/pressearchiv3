@@ -10,8 +10,10 @@
  * @license     GNU General Public License version 3 or later
  */
 
-
 defined('_JEXEC') or die;
+
+JHtml::_('behavior.framework');
+JHtml::_('behavior.modal');
 
 $script = <<<ENDSCRIPT
 window.addEvent( 'domready' ,  function() {
@@ -43,8 +45,7 @@ function showChangelog()
     );
 }
 ENDSCRIPT;
-$document = JFactory::getDocument();
-$document->addScriptDeclaration($script,'text/javascript');
+JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 
 ?>
 <form action="index.php" method="post" name="adminForm">
@@ -70,16 +71,22 @@ $document->addScriptDeclaration($script,'text/javascript');
 			</div>
 			
 			<div class="pressearchiv-cpanel-right">
+		
 				<div class="well">
 					<div style="float:right;margin:10px;">
 						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', JText::_('COM_PRESSEARCHIV_LOGO')); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
-					<p><?php echo PressearchivHelper::getVersion();?> &bull;
-					
+
 					<!-- CHANGELOG :: BEGIN -->
+					<p>
+						<?php echo PressearchivHelper::getVersion();?> &bull;
 						<a href="#" id="btnchangelog" class="btn btn-mini">CHANGELOG</a>
 					</p>
+					<?php
+					require_once dirname(__FILE__).'/coloriser.php';
+					echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/CHANGELOG.php');
+					?>
 					<div style="display:none;">
 						<div id="pressearchiv-changelog">
 							<?php

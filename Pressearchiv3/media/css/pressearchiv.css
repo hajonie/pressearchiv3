@@ -35,3 +35,20 @@
 	margin-top: 10px;
 	margin-bottom: -12px;
 }
+
+/*
+ * Changelog
+ */
+h3.pressearchiv-changelog { border-bottom: 2px solid #333; margin-top: 10pt; font-size: 13pt; }
+ul.pressearchiv-changelog { list-style-type: none; padding: 7px; margin: 3px; font-size: 10pt; border: thin solid #ccc; background-color: #fefefe; border-radius: 5px; }
+ul.pressearchiv-changelog li { line-height: 16px; padding: 0; margin: 0 3px 3px; }
+li.pressearchiv-changelog-added		{ color: green; }
+li.pressearchiv-changelog-removed		{ color: red; }
+li.pressearchiv-changelog-changed		{ color: #666; }
+li.pressearchiv-changelog-important	{ color: #cc8833; }
+li.pressearchiv-changelog-fixed		{ color: blue; }
+ul.pressearchiv-changelog span			{ display: inline-block; height: 16px; width: 32px; background: transparent url(../images/changelog.png) top left no-repeat; margin-right: 4px; }
+li.pressearchiv-changelog-removed span	{ background-position: 0 -16px; }
+li.pressearchiv-changelog-changed	span	{ background-position: 0 -32px; }
+li.pressearchiv-changelog-important span	{ background-position: 0 -64px; }
+li.pressearchiv-changelog-fixed span		{ background-position: 0 -48px; }

@@ -9,7 +9,7 @@
  * @copyright   Copyright (C) 2011 - 2013 Pressearchiv Development Team, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later
  */
-
+      
 class PressearchivChangelogColoriser
 {
 	public static function colorise($file, $onlyLast = false)
