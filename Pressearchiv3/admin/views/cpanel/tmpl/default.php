@@ -13,6 +13,39 @@
 
 defined('_JEXEC') or die;
 
+$script = <<<ENDSCRIPT
+window.addEvent( 'domready' ,  function() {
+	$('optimize').addEvent('click', warnBeforeOptimize);
+    $('btnchangelog').addEvent('click', showChangelog);
+});
+
+
+function warnBeforeOptimize(e)
+{
+	if(!confirm('$confirm'))
+	{
+		e.preventDefault();
+	}
+}
+
+function showChangelog()
+{
+	var pressearchivChangelogElement = $('pressearchiv-changelog').clone();
+
+    SqueezeBox.fromElement(
+        pressearchivChangelogElement, {
+            handler: 'adopt',
+            size: {
+                x: 550,
+                y: 500
+            }
+        }
+    );
+}
+ENDSCRIPT;
+$document = JFactory::getDocument();
+$document->addScriptDeclaration($script,'text/javascript');
+
 ?>
 <form action="index.php" method="post" name="adminForm">
 	<div id="j-sidebar-container" class="span2">
@@ -51,7 +84,7 @@ defined('_JEXEC') or die;
 						<div id="pressearchiv-changelog">
 							<?php
 								require_once dirname(__FILE__).'/coloriser.php';
-								echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/CHANGELOG.php');
+								echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/changelog.php');
 							?>
 						</div>
 					</div>
