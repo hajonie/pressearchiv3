@@ -83,10 +83,6 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 						<?php echo PressearchivHelper::getVersion();?> &bull;
 						<a href="#" id="btnchangelog" class="btn btn-mini">CHANGELOG</a>
 					</p>
-					<?php
-					require_once dirname(__FILE__).'/coloriser.php';
-					echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/CHANGELOG.php');
-					?>
 					<div style="display:none;">
 						<div id="pressearchiv-changelog">
 							<?php
