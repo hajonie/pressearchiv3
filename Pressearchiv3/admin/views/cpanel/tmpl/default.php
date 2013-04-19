@@ -84,7 +84,7 @@ $document->addScriptDeclaration($script,'text/javascript');
 						<div id="pressearchiv-changelog">
 							<?php
 								require_once dirname(__FILE__).'/coloriser.php';
-								echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/changelog.php');
+								echo PressearchivChangelogColoriser::colorise(JPATH_COMPONENT_ADMINISTRATOR.'/CHANGELOG.php');
 							?>
 						</div>
 					</div>
