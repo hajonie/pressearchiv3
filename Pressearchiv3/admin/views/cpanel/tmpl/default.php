@@ -65,6 +65,9 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 						
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
 					echo PressearchivHelper::quickIconButton($link, "icon-48-source.png", JText::_('COM_PRESSEARCHIV_QUELLEN'));
+
+					$link = 'index.php?option=com_pressearchiv&amp;view=cofiguration';
+					echo PressearchivHelper::quickIconButton($link, "icon-48-settings.png", JText::_('COM_PRESSEARCHIV_KONFIGURATION'));
 					?>
 					<div style="clear:both">&nbsp;</div>
 				</div>

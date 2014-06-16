@@ -132,6 +132,11 @@ class PressearchivHelper
 			'index.php?option=com_pressearchiv&view=sources',
 			$vName == 'sources'
 		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_PRESSEARCHIV_SUBMENU_KONFIGURATION'),
+			'index.php?option=com_pressearchiv&view=configuration',
+			$vName == 'configuration'
+		);
 		
 		if ($vName == 'categories')
 		{
