@@ -73,7 +73,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 			<div class="pressearchiv-cpanel-right">
 		
 				<div class="well">
-					<div style="float:right;margin:10px;">
+					<div style="float:right;margin:10px;max-width:100%;height:auto;">
 						<?php echo JHTML::_('image', 'media/com_pressearchiv/images/logo-pressearchiv.png', JText::_('COM_PRESSEARCHIV_LOGO')); ?>
 					</div>
 					<h3><?php echo JText::_('JVERSION'); ?></h3>
