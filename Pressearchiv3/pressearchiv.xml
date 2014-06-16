@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5.0" method="upgrade">
 	<name>COM_PRESSEARCHIV</name>
-	<creationDate>März 2013</creationDate>
+	<creationDate>Juni 2014</creationDate>
 	<author>Pressearchiv Development Team</author>
 	<authorEmail>hj.n@bigfoot.com</authorEmail>
 	<authorUrl>http://jpa.hjnbb.de</authorUrl>
-	<copyright>Copyright (c) 2011 - 2013 by Pressearchiv Development Team</copyright>
+	<copyright>Copyright (c) 2011 - 2014 by Pressearchiv Development Team</copyright>
 	<license>This component in released under the GNU/GPL v3 or later license</license>
 	<version>3.0.0a1</version>
 	<description>COM_PRESSEARCHIV_DESCRIPTION</description>
