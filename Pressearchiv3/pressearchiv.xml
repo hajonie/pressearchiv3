@@ -47,7 +47,7 @@
 
 	<administration>
 	<!-- Administration Menu Section -->
-		<menu img="class:banners">COM_PRESSEARCHIV_MENU</menu>
+		<menu>COM_PRESSEARCHIV_MENU</menu>
 		<submenu>
 			<menu alt="COM_PRESSEARCHIV_SUBMENU_CP" view="cpanel" link="option=com_pressearchiv">COM_PRESSEARCHIV_SUBMENU_CP</menu>
 			<menu alt="COM_PRESSEARCHIV_ARTIKEL" view="articles" link="option=com_pressearchiv&amp;view=pressearchivs">COM_PRESSEARCHIV_SUBMENU_ARTIKEL</menu>
