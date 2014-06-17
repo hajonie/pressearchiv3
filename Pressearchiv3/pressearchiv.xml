@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="2.5.0" method="upgrade">
+<extension type="component" version="3.1" method="upgrade">
 	<name>COM_PRESSEARCHIV</name>
 	<creationDate>Juni 2014</creationDate>
 	<author>Pressearchiv Development Team</author>
@@ -47,13 +47,13 @@
 
 	<administration>
 	<!-- Administration Menu Section -->
-		<menu>COM_PRESSEARCHIV_MENU</menu>
+		<menu img="class:banners">COM_PRESSEARCHIV_MENU</menu>
 		<submenu>
 			<menu alt="COM_PRESSEARCHIV_SUBMENU_CP" view="cpanel" link="option=com_pressearchiv">COM_PRESSEARCHIV_SUBMENU_CP</menu>
 			<menu alt="COM_PRESSEARCHIV_ARTIKEL" view="articles" link="option=com_pressearchiv&amp;view=pressearchivs">COM_PRESSEARCHIV_SUBMENU_ARTIKEL</menu>
 			<menu alt="COM_PRESSEARCHIV_KATEGORIEN" view="categories" link="option=com_pressearchiv&amp;view=categories">COM_PRESSEARCHIV_SUBMENU_KATEGORIEN</menu>
 			<menu alt="COM_PRESSEARCHIV_QUELLEN" view="sources" link="option=com_pressearchiv&amp;view=sources">COM_PRESSEARCHIV_SUBMENU_QUELLEN</menu>
-			<menu alt="COM_PRESSEARCHIV_KONFIGURIEREN" view="sources" link="option=com_pressearchiv&amp;view=configuration">COM_PRESSEARCHIV_SUBMENU_KONFIGURATION</menu>
+			<menu alt="COM_PRESSEARCHIV_KONFIGURATION" view="sources" link="option=com_pressearchiv&amp;view=configuration">COM_PRESSEARCHIV_SUBMENU_KONFIGURATION</menu>
 		</submenu>
 		<!-- Administration Main File Copy Section -->
 		<files folder="admin">
