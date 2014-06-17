@@ -64,7 +64,7 @@ class PressearchivViewCPanel extends JViewLegacy
 		
 		$state	= $this->get('State');
 
-		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'pushpin');
+		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV_CPANEL_TITLE'), 'archive');
 
 		JHtmlSidebar::addFilter(
 		JText::_('JOPTION_SELECT_CATEGORY'),
