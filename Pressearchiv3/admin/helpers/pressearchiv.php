@@ -124,7 +124,7 @@ class PressearchivHelper
 		);
 		JHtmlSidebar::addEntry(
 			JText::_('COM_PRESSEARCHIV_SUBMENU_KATEGORIEN'),
-			'index.php?option=com_pressearchiv&view=categories',
+			'index.php?option=com_categories&amp;extension=com_pressearchiv',
 			$vName == 'categories'
 		);
 		JHtmlSidebar::addEntry(

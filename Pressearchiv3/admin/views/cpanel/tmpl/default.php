@@ -60,7 +60,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 					$link = 'index.php?option=com_pressearchiv&amp;view=pressearchivs';
 					echo PressearchivHelper::quickIconButton($link, "icon-48-home.png", JText::_('COM_PRESSEARCHIV_ARTIKEL'));
 
-					$link = 'index.php?option=com_pressearchiv&amp;view=categories';
+					$link = 'index.php?option=com_categories&amp;extension=com_pressearchiv';
 					echo PressearchivHelper::quickIconButton($link, "icon-48-category.png", JText::_('COM_PRESSEARCHIV_KATEGORIEN'));
 						
 					$link = 'index.php?option=com_pressearchiv&amp;view=sources';
