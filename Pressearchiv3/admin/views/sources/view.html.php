@@ -43,9 +43,9 @@ class PressearchivViewSources extends JViewLegacy
 	
 	protected function addToolbar()
 	{
-		require_once JPATH_COMPONENT . '/helpers/sources.php';
+		require_once JPATH_COMPONENT . '/helpers/pressearchiv.php';
 		
-		$canDo = JHelperContent::getActions('com_banners');
+		$canDo = JHelperContent::getActions('com_pressearchiv');
 		
 		JToolbarHelper::title(JText::_('COM_PRESSEARCHIV_SOURCES_TITLE'), 'pictures');
 		

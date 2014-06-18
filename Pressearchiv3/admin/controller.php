@@ -42,7 +42,30 @@ class PressearchivController extends JControllerLegacy
 	{
 		$view   = $this->input->get('view', 'cpanel');
 		$layout = $this->input->get('layout', 'cpanel');
+		$id     = $this->input->getInt('id');
 
+		// Check for edit form.
+		if ($view == 'article' && $layout == 'edit' && !$this->checkEditId('com_pressearchiv.edit.article', $id))
+		{
+		
+			// Somehow the person just went to the form - we don't allow that.
+			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+			$this->setMessage($this->getError(), 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_pressearchiv&view=articles', false));
+		
+			return false;
+		}
+		elseif ($view == 'source' && $layout == 'edit' && !$this->checkEditId('com_pressearchiv.edit.source', $id))
+		{
+		
+			// Somehow the person just went to the form - we don't allow that.
+			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+			$this->setMessage($this->getError(), 'error');
+			$this->setRedirect(JRoute::_('index.php?option=com_pressearchiv&view=sources', false));
+		
+			return false;
+		}
+		
 		parent::display();
 
 		return $this;
