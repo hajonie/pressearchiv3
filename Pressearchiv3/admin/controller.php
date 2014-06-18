@@ -21,10 +21,6 @@ defined('_JEXEC') or die;
  */
 class PressearchivController extends JControllerLegacy
 {
-	/**
-	 * @var   string  The default view.
-	 * @since   3.0
-	 */
 	protected $default_view = 'cpanel';
 	
 	/**
@@ -36,12 +32,11 @@ class PressearchivController extends JControllerLegacy
 	 * @return	JController		This object to support chaining.
 	 * @since	3.0
 	 */
-
 	
 	public function display($cachable = false, $urlparams = false)
 	{
 		$view   = $this->input->get('view', 'cpanel');
-		$layout = $this->input->get('layout', 'cpanel');
+		$layout = $this->input->get('layout', 'default');
 		$id     = $this->input->getInt('id');
 
 		// Check for edit form.
