@@ -37,15 +37,16 @@ class PressearchivViewCPanel extends JViewLegacy
 		JHTML::_('behavior.tooltip');
 		JHTML::stylesheet(JUri::root() . 'media/com_pressearchiv/css/pressearchiv.css');
 
-		PressearchivHelper::addSubmenu('pressearchiv');
-		
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{
-			JError::raiseError(500, implode('\n', $errors));
+			JError::raiseError(500, implode("\n", $errors));
+
 			return false;
 		}
 
+		PressearchivHelper::addSubmenu('pressearchiv');
+		
 		$this->addToolBar();
 		$this->sidebar = JHtmlSidebar::render();
 		parent::display($tpl);
