@@ -26,7 +26,7 @@ class PressearchivViewSources extends JViewLegacy
 		$this->filterForm    = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 		
-		//Check fpr errors
+		//Check for errors
 		if (count($errors = $this->get('Errors')))
 		{
 			JError::raiseError(500, implode("\n", $errors));
