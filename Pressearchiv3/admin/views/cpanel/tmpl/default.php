@@ -15,36 +15,29 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.framework');
 JHtml::_('behavior.modal');
 
-$script = <<<ENDSCRIPT
-window.addEvent( 'domready' ,  function() {
-	$('optimize').addEvent('click', warnBeforeOptimize);
-    $('btnchangelog').addEvent('click', showChangelog);
-});
+$script = <<<JS
+(function($){
+	$(document).ready(function(){
+		$('#btnchangelog').click(showChangelog);
+	});
 
-
-function warnBeforeOptimize(e)
-{
-	if(!confirm('$confirm'))
+	function showChangelog()
 	{
-		e.preventDefault();
+		var pressearchivChangelogElement = $('#pressearchiv-changelog').clone().appendTo('body').attr('id', 'pressearchiv-changelog-clone');
+
+		SqueezeBox.fromElement(
+			document.getElementById('pressearchiv-changelog-clone'), {
+				handler: 'adopt',
+				size: {
+					x: 550,
+					y: 500
+				}
+			}
+		);
 	}
-}
+})(pressearchiv.jQuery);
+JS;
 
-function showChangelog()
-{
-	var pressearchivChangelogElement = $('pressearchiv-changelog').clone();
-
-    SqueezeBox.fromElement(
-        pressearchivChangelogElement, {
-            handler: 'adopt',
-            size: {
-                x: 550,
-                y: 500
-            }
-        }
-    );
-}
-ENDSCRIPT;
 JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 
 ?>
@@ -84,7 +77,7 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 					<!-- CHANGELOG :: BEGIN -->
 					<p>
 						<?php echo PressearchivHelper::getVersion();?> &bull;
-						<a href="#" id="btnchangelog" class="btn btn-mini">CHANGELOG</a>
+						<a href="#" id="btnchangelog" class="btn btn-info btn-mini">CHANGELOG</a>
 					</p>
 					<div style="display:none;">
 						<div id="pressearchiv-changelog">
@@ -101,6 +94,13 @@ JFactory::getDocument()->addScriptDeclaration($script,'text/javascript');
 					<p><a href="http://jpa.hjnbb.de" target="_blank">Homepage</a></p>
 					<h3><?php echo JText::_('COM_PRESSEARCHIV_LICENCE'); ?></h3>
 					<p><a href="http://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3</a></p>
+
+					<h3><?php echo JText::_('COM_PRESSEARCHIV_DERIVATIVE_WORK');?></h3>
+					<p>
+						Pressearchiv &copy; 2005 - 2006 bis Version 1.3.1 für Joomla! 1.0 <a href="http://www.helsystems.com/" target="_blank">Andre Timmermanns</a>,&nbsp;
+						<?php echo JText::_('COM_PRESSEARCHIV_LICENCE'); ?>: <a href="http://www.gnu.org/licenses/gpl-1.0.html" target="_blank">GPL</a><br />
+					</p>
+					
 					<div style="border-top:1px solid #c2c2c2"></div>
 					<p>&nbsp;</p>
 					<div class="btn-group">

@@ -36,7 +36,7 @@ class PressearchivViewConfiguration extends JViewLegacy
 	protected function addToolBar()
 	{
 		$canDo = PressearchivHelper::getActions();
-		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV') . ':' . JText::_('COM_PRESSEARCHIV_KONFIGURATION'), 'wrench');
+		JToolBarHelper::title(JText::_('COM_PRESSEARCHIV') . ': ' . JText::_('COM_PRESSEARCHIV_KONFIGURATION'), 'wrench');
 
 		if ($canDo->get('core.admin'))
 		{
